@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsx ./Main.ts"
+    "start": "tsx ./src/Main.ts"
   },
   "dependencies": {
     "better-auth": "^1.3.4",

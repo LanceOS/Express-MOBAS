@@ -16,11 +16,13 @@ import 'dotenv/config'
 import { drizzle } from "drizzle-orm/node-postgres";
 // Import the 'Pool' class from the 'pg' library, used for managing database connections.
 import { Pool } from "pg";
-// import { example } from './schemas/example';
-// import { exampleRelations } from './schemas/relations';
+
 
 // Import all defined database schema files.
 // These files contain the Drizzle ORM definitions for the database tables and relationships.
+import * as authentication from './schemas/authentication'
+import * as example from './schemas/example';
+import * as exampleRelations from './schemas/relations';
 
 /**
  * @constant {string} databaseUrl
@@ -83,9 +85,9 @@ testConnection();
  * schemas to a "barrel" file. Learn more about barrels here at https://basarat.gitbook.io/typescript/main-1/barrel.
  */
 const schemas = {
-    // ...authentication, // Includes all table and relation schemas from 'authentication.ts'.
-    // ...example,         // Includes all table and relation schemas from 'example.ts'.
-    // ...exampleRelations        // Includes all table and relation schemas from 'relations.ts'.
+    ...authentication, // Includes all table and relation schemas from 'authentication.ts'.
+    ...example,         // Includes all table and relation schemas from 'example.ts'.
+    ...exampleRelations        // Includes all table and relation schemas from 'relations.ts'.
 };
 
 /**
