@@ -1,6 +1,10 @@
-import express from 'express'
+import express, { json, urlencoded } from 'express'
+import { DrizzleDB } from './database/Drizzle';
 const app = express()
+app.use(urlencoded({ extended: true }));
+app.use(json());
 const port = 3000
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
