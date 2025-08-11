@@ -9,7 +9,9 @@
  * It also includes a connection test to verify database accessibility on application startup.
  */
 
-import 'dotenv/config'
+// Import 'dotenv/config' to load environment variables from a .env file into process.env.
+// This ensures that database credentials and other configuration are not hardcoded.
+import 'dotenv/config';
 
 
 // Import core Drizzle ORM functionality for node-postgres.

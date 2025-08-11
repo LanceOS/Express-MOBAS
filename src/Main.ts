@@ -1,5 +1,4 @@
 import express, { json, urlencoded } from 'express'
-import { DrizzleDB } from './database/Drizzle';
 const app = express()
 app.use(urlencoded({ extended: true }));
 app.use(json());

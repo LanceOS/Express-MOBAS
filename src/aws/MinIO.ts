@@ -11,7 +11,10 @@
 
 import * as Minio from 'minio';
 import { v4 as uuidv4 } from 'uuid';
-import 'dotenv/config'
+
+// Import 'dotenv/config' to load environment variables from a .env file into process.env.
+// This ensures that database credentials and other configuration are not hardcoded.
+import 'dotenv/config';
 
 
 /**
